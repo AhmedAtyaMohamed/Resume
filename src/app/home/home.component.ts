@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
-LogToConsole(){
-  console.log("this log From Home componant ...");
-}
+constructor(private titleservice: Title ){
+titleservice.setTitle('ahmed attya . home');
+}    
 }
