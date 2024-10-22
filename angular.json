@@ -93,8 +93,17 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "https://github.com/ahmedattya95/MyPortpolioProject.git"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9e7bd62f-026f-4b96-a428-0e05bad45734"
   }
 }
