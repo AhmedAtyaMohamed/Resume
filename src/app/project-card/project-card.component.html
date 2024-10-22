@@ -1,0 +1,18 @@
+<div class="card shadow text-center project-card">
+  <div class="card-body">
+    <h5 class="card-title">{{ ProjectName }}</h5>
+    <p class="card-text">
+      {{ Describtion }}
+    </p>
+    <button class="btn btn-primary">View More</button>
+  </div>
+  <div class="card-footer">
+    <div class="d-flex flex-wrap justify-content-center">
+      <ul class="list-group list-group-horizontal">
+        <li  class="tag me-2 mb-1 list-group-item" *ngFor="let item1 of Tags">
+          {{ item1 }} 
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
