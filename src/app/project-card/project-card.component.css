@@ -3,16 +3,18 @@
     min-width: 350px;
 }
 .project-card .card-text{
-    max-height: 150px;
-    overflow-y: scroll;
+    max-height: 100px;
+    min-height: 100px;
+    overflow-y:  auto;
+    text-wrap: wrap;
 }
 .tag{
-    padding: 0 20px;
+    padding: 0 15px;
     height: 30px;
     width: fit-content;
     font-size: 14px;
     line-height: 30px;
-    border-radius: 25px 25px 25px 25px;
-    background-color: #05bdf6;
+    border-radius: 20px  ;
+ 
     color: white;
 }

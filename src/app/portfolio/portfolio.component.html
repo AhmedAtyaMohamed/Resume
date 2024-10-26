@@ -1,14 +1,12 @@
 <div class="container">
   <div class="row">
     <div
-      class="col-lg-4 col-md-6 mb-4"
-      style="max-width: 380px; min-width: 380px"
-    >
-      <app-project-card [ProjectName]="'MAUI'"
-       [Describtion]="'maui is most technology has amazing future'"
-       [Tags]="['C#', 'razor','Xaml']"
-
-       ></app-project-card>
+      class="col-lg-12 col-md-12 mb-2"      style="display: flex; justify-content: center;"    >
+    <div *ngFor="let project1 of project">
+      
+        <app-project-card [Project]='project1'></app-project-card>
+     
+    </div> 
     </div>
      
   </div>
