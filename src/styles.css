@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+.tag{
+    padding: 0 15px;
+    height: 30px;
+    width: fit-content;
+    font-size: 14px;
+    line-height: 30px;
+    border-radius: 20px  ;
+ 
+    color: white;
+}
+.carousel-image {
+    display: inline-block;
+    align-content: center;
+    Min-width: 150px;
+    Max-width: 100%;
+    min-height: 70svh;
+    Max-height: 70svh;
+    zoom: normal;
+
+}
+
+.modal-body-style {
+    Max-height: 100%
+}
+
+carousel {
+    Max-height: 100%;
+    display: block;
+    justify-content: center;
+    border: 1px dashed black;
+}

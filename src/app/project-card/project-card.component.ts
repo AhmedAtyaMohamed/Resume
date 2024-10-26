@@ -19,7 +19,7 @@ constructor(private modalService: BsModalService) {
 }
 OnpoenProjectModal(){
   const modalOptions: ModalOptions={
-    class: 'modal-lg',
+    class: 'modal-lg', 
     initialState:{
       project:this.Project
     }

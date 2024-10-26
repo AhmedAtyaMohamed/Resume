@@ -47,4 +47,21 @@ export class ProjectsService {
       return project;
     }
   }
+  GetProjectsByFilter(tags: Tag[]): Project[] {
+    if (tags.length === 0) {
+      return this.projectList;
+    } 
+    else {
+       return this.projectList.filter((project) => {
+      let found = false;
+      project.tags.forEach((tag) => {
+        if (tags.includes(tag)) {
+          found = true;
+        }
+      });
+      return found;
+    });
+    }  
+   
+  }
 }

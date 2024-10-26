@@ -4,21 +4,31 @@
     type="button"
     class="btn-close"
     aria-label="Close"
-    (click)="this.bsModalRef?.hide()"
+    (click)="this.bsModalRef.hide()"
   >
     <span aria-hidden="true" class="visually-hidden">&times;</span>
   </button>
 </div>
 <div class="modal-body modal-body-style">
   <carousel class="d-block">
-    <slide>
-      <img src="{{ project.pictures[0] }}" class="carousel-image" />
-    </slide>
-    <slide>
-      <img src="{{ project.pictures[1] }}" class="carousel-image" />
-    </slide>
-    <slide>
-      <img src="{{ project.pictures[2] }}" class="carousel-image" />
-    </slide>
+    <div *ngFor="let pic of this.project.pictures">
+      <slide>
+        <img src="{{ pic}}" 
+        class="carousel-image" />
+      </slide>
+
+    </div>
+   
   </carousel>
+  <h3 class="mt-2">    Description  </h3>
+  <p>{{ this.project.describtion }}</p>
+  <p>You can find this project on github <a href="{{ this.project.projectLink }}" target="_blank"> Here </a> .</p>
+  <hr/>
+<div class="d-flex flex-wrap">
+  <div *ngFor="let tag of this.project.tags">
+    <div class="tag me-1 mb-0" [style.background-color]="tag.getColor()" style="font-size: 0.8rem" >
+      {{ tag.toString() }}
+    </div>
+  </div>
+</div>
 </div>

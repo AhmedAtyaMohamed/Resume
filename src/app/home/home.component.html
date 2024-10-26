@@ -1,18 +1,16 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md col-sm shadow border m-1 mb-5">
+  <div class="row ml-2 p-5  mr-2">
+    <div class="col-md col-sm-12 col-lg col-xl shadow border me-3  mb-5">
       <div class="text-center">
         <h2>About Me</h2>
         <img
           src="../../assets/aattya.jpg"
           alt="my pic"
-          width="256"
-          height="256"
+          width="296"
+          height="296"
           class="rounded-circle shadow shadow-lg p-2 mb-3 bg-body-tertiary rounded"
         />
-        <div
-          class="p-2 bg-info bg-opacity-10 border border-info border-start-0 rounded-end"
-        >
+        <div class="p-2 bg-info bg-opacity-10 ">
           <p>
             hi, it's me ahmed attya , i work for smartup company as software
             developer since 2022.
@@ -24,7 +22,19 @@
       <div class="text-center">
         <h2>Featured Projects</h2>
         <H4>{{featuredProject.name}}</H4>
-        
+        <carousel class="d-block">
+          <div *ngFor="let pic of this.featuredProject.pictures">
+            <slide>
+              <img src="{{ pic}}" 
+              class="carousel-image" />
+            </slide>
+      
+          </div>
+         
+        </carousel>
+        <p  >
+          {{ featuredProject.summary }}
+        </p>
       </div>
     </div>
   </div>

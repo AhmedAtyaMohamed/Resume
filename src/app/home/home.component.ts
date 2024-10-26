@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProjectsService } from '../_services/projects.service';
 import { Project } from '../_models/Projects';
-
+import { ProjectCardComponent } from '../project-card/project-card.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
