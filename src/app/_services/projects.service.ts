@@ -9,14 +9,13 @@ export class ProjectsService {
     {
       id: 0,
       name: 'MAUI App',
-      summary:
-        '* - maui is most technology  ',
-      describtion:   '* - maui is most technology has amazing future  * - maui is most technology has amazing future',
-    
+      summary: '* - maui is most technology  ',
+      describtion:
+        '* - maui is most technology has amazing future  * - maui is most technology has amazing future',
+
       tags: [Tag.CSHARP, Tag.ANDGULAR, Tag.JAVASCRIPT],
       projectLink: 'https://github.com/ahmedattya/maui',
       pictures: [
-
         'https://www.softwaresuggest.com/blog/wp-content/uploads/2019/05/erp-infographics.jpg',
         'https://th.bing.com/th/id/OIP.oIrLLlE-P8nfPd_BKKzhPgHaDy?rs=1&pid=ImgDetMain',
         'https://th.bing.com/th/id/OIP.kQy3WHaz-34a1XqbxzCUmwHaGO?rs=1&pid=ImgDetMain',
@@ -50,18 +49,16 @@ export class ProjectsService {
   GetProjectsByFilter(tags: Tag[]): Project[] {
     if (tags.length === 0) {
       return this.projectList;
-    } 
-    else {
-       return this.projectList.filter((project) => {
-      let found = false;
-      project.tags.forEach((tag) => {
-        if (tags.includes(tag)) {
-          found = true;
-        }
+    } else {
+      return this.projectList.filter((project) => {
+        let found = false;
+        project.tags.forEach((tag) => {
+          if (tags.includes(tag)) {
+            found = true;
+          }
+        });
+        return found;
       });
-      return found;
-    });
-    }  
-   
+    }
   }
 }

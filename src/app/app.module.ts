@@ -15,7 +15,12 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';  
-import { AccordionComponent, AccordionPanelComponent } from 'ngx-bootstrap/accordion';
+import {AccordionModule   } from 'ngx-bootstrap/accordion';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,26 +30,28 @@ import { AccordionComponent, AccordionPanelComponent } from 'ngx-bootstrap/accor
     PortfolioComponent,
     ResumeComponent,
     ContactComponent,
-   
+   ProjectCardComponent ,   
+    ProjectModalComponent,
   ],
-  imports: [
-    CommonModule, 
+
+  imports: [       
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    ProjectCardComponent,
-    AccordionComponent,
-    AccordionPanelComponent
+    BrowserAnimationsModule,  
     ModalModule.forRoot(),
     CarouselModule.forRoot(),
-    CollapseModule.forRoot(),
+    CollapseModule.forRoot(), 
+    AccordionModule.forRoot(), 
     FormsModule, 
-  
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIcons(faCoffee);
+  }
   // public generateGUID(): string {
   //   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
   //     const r = Math.random() * 16 | 0;

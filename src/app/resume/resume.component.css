@@ -1,0 +1,17 @@
+accordion-group::ng-deep .btn-link{
+    color:var(--Atyawhite);
+    text-decoration: none;
+}
+ .btn-Expand,.btn-Collapse{
+    color:var(--Atyawhite);
+}
+.btn-btns-collapseExpand{
+    width: 10.95px; 
+}
+accordion-group::ng-deep .card-header{
+    background-color:var(--Atyablue);
+}
+
+accordion-group::ng-deep  .card-body {
+    border: 1px solid var(--Atyablue);  
+}

@@ -6,8 +6,7 @@ import { ProjectModalComponent } from '../project-modal/project-modal.component'
 
 @Component({
   selector: 'app-project-card',
-  standalone: true,
-  imports: [CommonModule], // <-- Add CommonModule here
+ 
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.css'
 })

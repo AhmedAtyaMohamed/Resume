@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --Atyawhite:#fff;
+    --Atyablue:#0866ff;
+}
 .tag{
     padding: 0 15px;
     height: 30px;
@@ -29,4 +33,13 @@ carousel {
     display: block;
     justify-content: center;
     border: 1px dashed black;
+}
+.Divhidden{
+    visibility: hidden;
+}
+.atyatxtleft,.skills1{
+    text-align: left !important;
+}
+.atyatxtblue::after,.atyatxtblue,.atyatxtblue::before{
+    color: var( --Atyablue);
 }

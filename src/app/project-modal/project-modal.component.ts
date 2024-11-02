@@ -5,8 +5,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-project-modal',
-  standalone: true,
-  imports: [ CarouselModule,CommonModule],
+  
   templateUrl: './project-modal.component.html',
   styleUrl: './project-modal.component.css'
 })
