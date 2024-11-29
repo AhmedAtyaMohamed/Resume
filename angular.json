@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-protfolio-website",
+            "outputPath": "dist/MyPortpolioProject",
               "baseHref": "https://ahmedattya95.github.io/MyPortpolioProject/",
             "index": "src/index.html",
             "main": "src/main.ts",
