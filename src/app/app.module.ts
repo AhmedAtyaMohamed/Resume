@@ -1,5 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { getDatabase } from 'firebase/database';
+import { environment } from '../environments/environment';
+
+
 import { CommonModule } from '@angular/common'; // <-- Make sure to import this
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +27,10 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+  
+
+// Initialize the AngularFireModule
+ 
 
 @NgModule({
   declarations: [
@@ -35,7 +46,9 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   ],
 
   imports: [       
-    BrowserModule,
+    BrowserModule,  
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     AppRoutingModule,
     BrowserAnimationsModule,  
     ModalModule.forRoot(),
@@ -43,7 +56,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
     CollapseModule.forRoot(), 
     AccordionModule.forRoot(), 
     FormsModule, 
-    FontAwesomeModule,
+    FontAwesomeModule, 
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -52,12 +65,6 @@ export class AppModule {
   constructor(library: FaIconLibrary) {
     library.addIcons(faCoffee);
   }
-  // public generateGUID(): string {
-  //   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-  //     const r = Math.random() * 16 | 0;
-  //     const v = c === 'x' ? r : (r & 0x3 | 0x8);
-  //     return v.toString(16);
-  //   });
-  // }
-
 }
+  //AngularFireModule.initializeApp(environment.firebase),
+//  AngularFireDatabaseModule,

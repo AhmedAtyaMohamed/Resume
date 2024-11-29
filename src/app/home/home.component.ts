@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ProjectsService } from '../_services/projects.service';
 import { Project } from '../_models/Projects';
-import { ProjectCardComponent } from '../project-card/project-card.component';
+
+import { FirebaseDataService } from '../_services/firebase-data.service';
+import { CV } from '../_models/CV';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,11 +12,17 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
 })
 export class HomeComponent implements OnInit {
   featuredProject = {} as Project;
-  constructor(    private titleservice: Title,    private projectsService: ProjectsService  ) 
+  cv={}as CV ;
+  constructor(    titleservice: Title,    private projectsService: ProjectsService,private firebaseService: FirebaseDataService  ) 
   {
     titleservice.setTitle('ahmed attya . home');
   }
   ngOnInit(): void {
     this.featuredProject = this.projectsService.GetProjectById(1);
+     // Fetch data
+     this.firebaseService.getData('CV').subscribe(data => {
+      this.cv = data;
+      console.log(this.cv);
+    });
   }
 }
