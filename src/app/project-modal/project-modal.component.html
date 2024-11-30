@@ -1,5 +1,5 @@
 <div class="modal-header">
-  <h2 class="modal-title pull-left">{{ project.name }}</h2>
+  <h2 class="modal-title pull-left">{{ project.Name }}</h2>
   <button
     type="button"
     class="btn-close"
@@ -11,23 +11,23 @@
 </div>
 <div class="modal-body modal-body-style">
   <carousel class="d-block">
-    <div *ngFor="let pic of this.project.pictures">
+    <div *ngFor="let pic of this.project.Pictures">
       <slide>
-        <img src="{{ pic}}" 
+        <img src="{{pic}}" 
         class="carousel-image" />
       </slide>
 
     </div>
    
   </carousel>
-  <h3 class="mt-2">    Description  </h3>
-  <p>{{ this.project.describtion }}</p>
-  <p>You can find this project on github <a href="{{ this.project.projectLink }}" target="_blank"> Here </a> .</p>
+  <h3 class="mt-2">Description</h3>
+  <p>{{ this.project.Describtion }}</p>
+  <p>You can find this project on github <a href="{{this.project.ProjectLink}}" target="_blank"> Here </a> .</p>
   <hr/>
 <div class="d-flex flex-wrap">
-  <div *ngFor="let tag of this.project.tags">
-    <div class="tag me-1 mb-0" [style.background-color]="tag.getColor()" style="font-size: 0.8rem" >
-      {{ tag.toString() }}
+  <div *ngFor="let tag of project.Tags">
+    <div class="tag me-1 mb-0" [style.background-color]="tag.Color" style="font-size: 0.8rem" >
+      {{ tag.Key }}
     </div>
   </div>
 </div>

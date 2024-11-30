@@ -21,8 +21,9 @@ OnpoenProjectModal(){
     class: 'modal-lg', 
     initialState:{
       project:this.Project
+      
     }
-  };
+  }; 
   this.bsModalRef=this.modalService.show(ProjectModalComponent,modalOptions);
 }
 } 

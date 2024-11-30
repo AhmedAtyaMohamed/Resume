@@ -18,36 +18,36 @@
           </div>
         </button>
         <div class="skills1">
-          <ul>
-            <li>
-              Programming: C#, VB.net, and basic/good knowledge of Python ,
-              jQuery , JavaScript.
-            </li>
-            <li>
-              Web Design Tools: HTML ,CSS ,Bootstrap , MudBlazor Component,
-              Devexpress blazor Component.
-            </li>
-            <li>
-              Frameworks: Asp.net MVC (Framework/Core) ,SPA Blazor (Web Assembly
-              , Server Side) , Xamarin , MAUI , Entity Framework-Code First/DB
-              First-
-            </li>
-            <li>Database: MS-SQL server, MySQL, PostgreSQL, SQLite</li>
-            <li>Others: GitHub.</li>
-            <li>Reports Tools: SSRS, Power Bi ,crystal Reports , RDLC,</li>
+          <ul *ngFor="let skill of this.CV.ComputerSkills">
+            <li   *ngIf="skill != null" >
+          {{skill}}
+            </li> 
           </ul>
         </div>
       </accordion-group>
-      <accordion-group heading="Work Experience" class="Divhidden" >
-        This content is straight in the template.
+      <accordion-group [(isOpen)]="isAchievementOpen">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        > 
+          <div class="Divhidden">></div>
+
+          <div class="btn-link">Achievement</div>
+          <div class="btn-btns-collapseExpand">
+            <div *ngIf="!isAchievementOpen" class="btn-Expand">></div>
+            <div *ngIf="isAchievementOpen" class="btn-Collapse">v</div>
+          </div>
+        </button>
+        <div class="skills1">
+          <ul *ngFor="let skill of this.CV.Achievement">
+            <li   *ngIf="skill != null" >
+          {{skill}}
+            </li> 
+          </ul>
+        </div>
       </accordion-group>
-      <accordion-group heading="Education" class="Divhidden">
-        <p>Some content</p>
-      </accordion-group>
-      <accordion-group  heading="Certifications" class="Divhidden">
-        <p>Some content</p>
-      </accordion-group>
-    
+
+
     </accordion>
   </div>
 </div>

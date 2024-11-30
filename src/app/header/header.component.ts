@@ -18,8 +18,7 @@ constructor(   private firebaseService: FirebaseDataService  )
 ngOnInit(): void { 
    // Fetch data
    this.firebaseService.getData('CV').subscribe(data => {
-    this.cv = data;
-    console.log(this.cv);
+    this.cv = data;  
   });
 }
 }

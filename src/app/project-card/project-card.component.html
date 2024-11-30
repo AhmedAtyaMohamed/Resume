@@ -1,8 +1,8 @@
 <div class="card shadow  text-center project-card m-1">
-  <h5 class="card-title">{{ Project.name }}</h5>
+  <h5 class="card-title">{{ Project.Name }}</h5>
   <div class="card-body">  
     <p class="card-text">
-      {{ Project.summary }}
+      {{ Project.Summary }}
     </p>
     <button class="btn btn-outline-success "  (click)="OnpoenProjectModal()" >
       View More
@@ -10,11 +10,13 @@
   </div>
   <div class="card-footer">
     <div class="d-flex flex-wrap justify-content-center">
-      <div *ngFor="let tag of Project.tags">
-        <div class="tag me-1 mb-0" [style.background-color]="tag.getColor()" style="font-size: 0.8rem"        >
-          {{ tag.toString() }}
+     <!-- -->
+      <div *ngFor="let tag of Project.Tags">
+        <div class="tag me-1 mb-0" [style.background-color]="tag.Color" style="font-size: 0.8rem" >
+          {{ tag.Key }}
         </div>
       </div>
+     
     </div>
   </div>
 </div>

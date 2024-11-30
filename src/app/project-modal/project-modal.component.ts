@@ -12,6 +12,6 @@ import { CommonModule } from '@angular/common';
 export class ProjectModalComponent {
   project ={} as Project;
 constructor(public bsModalRef:  BsModalRef ){
-
+//console.log(this.project);
 }
 }
