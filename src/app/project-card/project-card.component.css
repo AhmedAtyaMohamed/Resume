@@ -1,0 +1,10 @@
+.project-card{
+    max-width: 350px;
+    min-width: 350px;
+}
+.project-card .card-text{
+    max-height: 100px;
+    min-height: 100px;
+    overflow-y:  auto;
+    text-wrap: wrap;
+}

@@ -1,0 +1,53 @@
+<div class="container text-center">
+  <button (click)="DownloadFile()" class="btn btn-primary   mb-5 shadow border">
+    Download PDF Resume
+  </button>
+  <div class="pb-2">
+    <accordion [isAnimated]="true" class="shadow">
+        <accordion-group [(isOpen)]="isComputerSkillsOpen">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        > 
+          <div class="Divhidden">></div>
+
+          <div class="btn-link">Computer Skills</div>
+          <div class="btn-btns-collapseExpand">
+            <div *ngIf="!isComputerSkillsOpen" class="btn-Expand">></div>
+            <div *ngIf="isComputerSkillsOpen" class="btn-Collapse">v</div>
+          </div>
+        </button>
+        <div class="skills1">
+          <ul *ngFor="let skill of this.CV.ComputerSkills">
+            <li   *ngIf="skill != null" >
+          {{skill}}
+            </li> 
+          </ul>
+        </div>
+      </accordion-group>
+      <accordion-group [(isOpen)]="isAchievementOpen">
+        <button
+          class="btn btn-block justify-content-between d-flex w-100"
+          accordion-heading
+        > 
+          <div class="Divhidden">></div>
+
+          <div class="btn-link">Achievement</div>
+          <div class="btn-btns-collapseExpand">
+            <div *ngIf="!isAchievementOpen" class="btn-Expand">></div>
+            <div *ngIf="isAchievementOpen" class="btn-Collapse">v</div>
+          </div>
+        </button>
+        <div class="skills1">
+          <ul *ngFor="let skill of this.CV.Achievement">
+            <li   *ngIf="skill != null" >
+          {{skill}}
+            </li> 
+          </ul>
+        </div>
+      </accordion-group>
+
+
+    </accordion>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.fa-linkedin{
+   color:var(--Atyablue);
+}
+.list-group-item:hover,
+.list-group-item:focus,
+.list-group-item:active {
+  color: inherit; /* Keep original color */
+  background-color: transparent; /* Prevent background color change */
+}
+
+
+.no-hover {
+    color: var(--Atyablue);
+    text-decoration: none;
+  }
+  
+  .no-hover:hover,
+  .no-hover:focus,
+  .no-hover:active {
+    color: var(--Atyablue); 
+  }
