@@ -3,6 +3,15 @@
     --Atyawhite:#fff;
     --Atyablue:#0866ff;
 }
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gainsboro;
+    color: white;
+    text-align: center;
+  }
 .tag{
     padding: 0 15px;
     height: 30px;
