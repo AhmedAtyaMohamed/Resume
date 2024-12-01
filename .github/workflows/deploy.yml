@@ -3,7 +3,7 @@ name: Deploy Angular Project
 on:
   push:
     branches:
-      - main # Trigger deployment when changes are pushed to the main branch
+      - master # Trigger deployment when changes are pushed to the main branch
 
 jobs:
   build-and-deploy:
