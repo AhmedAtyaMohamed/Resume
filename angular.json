@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/MyPortpolioProject", 
+            "outputPath": "dist/Resume", 
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -99,7 +99,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "repo": "https://github.com/ahmedattya95/MyPortpolioProject.git"
+            "repo": "https://github.com/ahmedattya95/Resume.git"
           }
         }
       }

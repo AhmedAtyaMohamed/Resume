@@ -28,14 +28,14 @@ jobs:
     - name: Build Angular project
       run: |
         npm install -g @angular/cli # Ensure Angular CLI is installed
-        ng build --configuration production --base-href https://ahmedattya95.github.io/MyPortpolioProject/
+        ng build --configuration production --base-href https://ahmedattya95.github.io/Resume/
 
     # Step 5: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       run: |
         git checkout --orphan gh-pages
         git reset --hard
-        cp -r dist/MyPortpolioProject/* .
+        cp -r dist/Resume/* .
         git add .
         git commit -m "Deploy Angular project"
         git push origin gh-pages --force
