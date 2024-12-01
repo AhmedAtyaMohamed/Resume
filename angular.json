@@ -99,7 +99,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "repo": "https://github.com/ahmedattya95/Resume.git"
+            "repo": "https://github.com/AhmedAtyaMohamed/Resume.git"
           }
         }
       }
